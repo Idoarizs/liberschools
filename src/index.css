@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SFProRounded";
+  src: url("./assets/font/SF-Pro-Rounded-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

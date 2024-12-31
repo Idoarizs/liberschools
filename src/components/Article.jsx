@@ -6,9 +6,9 @@ const Article = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [filter, setFilter] = useState("Semua");
 
-  const filteredActivities = allActivities.filter((activity) => {
+  const filteredActivities = allActivities.filter((data) => {
     if (filter === "Semua") return true;
-    return activity.badge === filter;
+    return data.badge === filter;
   });
 
   const itemsPerPage = 9;
@@ -30,16 +30,18 @@ const Article = () => {
       <Filter filter={filter} setFilter={setFilter} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {currentPageActivities.map((data) => (
-          <NewsInformationCard
-            key={data.id}
-            id={data.id}
-            image={data.image}
-            badge={data.badge}
-            title={data.title}
-            description={data.description}
-          />
-        ))}
+        {currentPageActivities
+          .sort(() => Math.random() - 0.5)
+          .map((data) => (
+            <NewsInformationCard
+              key={data.id}
+              id={data.id}
+              image={data.image}
+              badge={data.badge}
+              title={data.title}
+              description={data.description}
+            />
+          ))}
       </div>
 
       <div className="flex justify-between items-center gap-8 text-customGray">

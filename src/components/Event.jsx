@@ -23,20 +23,22 @@ const Event = () => {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {currentPageActivities.map((data) => (
-          <NewsInformationCard
-            key={data.id}
-            id={data.id}
-            image={data.image}
-            title={data.title}
-            description={data.description}
-          />
-        ))}
+        {currentPageActivities
+          .sort(() => Math.random() - 0.5)
+          .map((data) => (
+            <NewsInformationCard
+              key={data.id}
+              id={data.id}
+              image={data.image}
+              title={data.title}
+              description={data.description}
+            />
+          ))}
       </div>
 
       <div className="flex justify-between items-center gap-8 text-customGray">
         <h2 className="text-customGray">
-          Menampilkan {startItem} - {endItem} dari {totalItems} {" "} Data
+          Menampilkan {startItem} - {endItem} dari {totalItems} Data
         </h2>
 
         <Pagination

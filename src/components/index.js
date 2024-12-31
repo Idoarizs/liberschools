@@ -24,3 +24,4 @@ export { default as FeatureCard } from "./card/FeatureCard";
 export { default as TSCard } from "./card/TeacherStaffCard";
 export { default as NewsInformationCard } from "./card/NewsInformationCard";
 export { default as LatestCard } from "./card/LatestCard";
+export { default as ShareCard } from "./card/ShareCard";

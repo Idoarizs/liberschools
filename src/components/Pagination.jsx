@@ -11,7 +11,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   };
 
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center gap-6 my-8">
       <h2 className="text-customGray">Halaman</h2>
 
       <button
